@@ -19,3 +19,10 @@ printTest=Square(0,0)
 #within the connection of classes is correct.
 
 print(printTest.findValidNumbers())
+
+
+if len(printTest.findValidNumbers()) == 1:
+    printTest.validToInt()
+
+    
+printTest.printArr()

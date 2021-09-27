@@ -23,6 +23,11 @@ class Square(Board):
         self.possibleBox=possibleValue(self.box)
         #^this is used to contain the values of the possible values in each area
 
+    def setVal(self,val):
+        self.value=val
+        self.array[self.x][self.y]=val
+
+
     def printRow(self):
         print(self.row)
 
@@ -61,5 +66,11 @@ class Square(Board):
                 finalArr.append(tempArr[c])
         return finalArr
 
+    def validToInt(self):
+        temp=self.findValidNumbers()
+        temp=map(str,temp)
+        temp=''.join(temp)
+        temp=int(temp)
 
-    
+        self.setVal(temp)
+

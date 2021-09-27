@@ -3,11 +3,7 @@ from square import Square
 
 
 
-#test=Board()
-#print(test.isEmpty(0,0))
-#test.printArr()
 
-printTest=Square(0,0)
 #With this object created, we are now able to create an object for each open square.
 #We are able to use the square.findValidNumbers() member function to check the possible
 #values of each open square.
@@ -17,12 +13,19 @@ printTest=Square(0,0)
 
 #The [8] value returend is the correct value and supports the position that the logic
 #within the connection of classes is correct.
+start=Board()
+start.printArr()
+while start.doesZeroExist():
+    for a in range(0,9):
+        for b in range(0,9):
+            if start.array[a][b] == 0:
+                temp=Square(a,b)
+                
+                
+                if(len(temp.findValidNumbers())) == 1:
+                    temp.validToInt()
+                    
+print()
+temp.printArr()
 
-print(printTest.findValidNumbers())
 
-
-if len(printTest.findValidNumbers()) == 1:
-    printTest.validToInt()
-
-    
-printTest.printArr()

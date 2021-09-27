@@ -29,3 +29,9 @@ class Board:
         else:
            return False
 
+    def doesZeroExist(self):
+        for j in range(0,9):
+            for i in range(0,9):
+                if self.array[j][i] == 0:
+                    return True
+        return False

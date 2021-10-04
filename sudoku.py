@@ -16,6 +16,7 @@ from square import Square
 start=Board()
 start.printArr()
 while start.doesZeroExist():
+
     for a in range(0,9):
         for b in range(0,9):
             if start.array[a][b] == 0:
@@ -24,8 +25,9 @@ while start.doesZeroExist():
                 
                 if(len(temp.findValidNumbers())) == 1:
                     temp.validToInt()
+                    temp.printArr()
                     
 print()
-temp.printArr()
+temp.outputAnswer()
 
 

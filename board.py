@@ -1,8 +1,11 @@
 import numpy as np
+import os
+here=os.path.dirname(os.path.abspath(__file__))
+filename=os.path.join(here,'input.txt')
 #using numpy to turn array of string to int
 importedArr = []
 
-with open("input.txt",'r') as f:
+with open(filename,'r') as f:
 
     for line in f.readlines():
         importedArr.append(line.split())
@@ -37,8 +40,10 @@ class Board:
         return False
 
     def outputAnswer(self):
-        self.array.printArr()
+        self.printArr()
         temp=str(self.array)
 
         with open("output,txt","w") as o:
                 o.write(temp)
+
+   

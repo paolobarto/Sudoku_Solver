@@ -2,8 +2,6 @@ from board import Board
 from square import Square
 
 
-
-
 #With this object created, we are now able to create an object for each open square.
 #We are able to use the square.findValidNumbers() member function to check the possible
 #values of each open square.
@@ -16,6 +14,7 @@ from square import Square
 start=Board()
 start.printArr()
 while start.doesZeroExist():
+
     for a in range(0,9):
         for b in range(0,9):
             if start.array[a][b] == 0:
@@ -25,7 +24,9 @@ while start.doesZeroExist():
                 if(len(temp.findValidNumbers())) == 1:
                     temp.validToInt()
                     
+                    
+                    
 print()
-temp.printArr()
+temp.outputAnswer()
 
 

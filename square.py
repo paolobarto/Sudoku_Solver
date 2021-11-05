@@ -1,16 +1,18 @@
 import numpy as np
 from board import Board
 from squareVal import findSquareVal,possibleValue
+import importlib
 
 
     
 
 class Square(Board):
+    
     def __init__(self,x,y):
         self.x=x
         self.y=y
 
-        Board.__init__(self)
+        super().__init__()
         self.value=self.array[x][y]
         #This will be used to grab the array at each column, row, and box.
         self.row=(self.array[x])
@@ -42,6 +44,8 @@ class Square(Board):
     def returnValue(self):
         return self.value
 
+
+
     def findValidNumbers(self):
         one=set(self.possibleRow)
         two=set(self.possibleColumn)
@@ -57,6 +61,7 @@ class Square(Board):
 
         self.setVal(temp)
 
+    
 
 #Added Class in Assingment 4, Although could be completed with direct logic, this allows for me
 #to make more complicated code in the future
